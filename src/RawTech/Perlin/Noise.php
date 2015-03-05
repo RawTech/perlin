@@ -10,16 +10,22 @@ namespace RawTech\Perlin;
 class Noise
 {
     /**
+     * Seed 1.
+     *
      * @var integer
      */
     private $r1;
 
     /**
+     * Seed 2.
+     *
      * @var integer
      */
     private $r2;
 
     /**
+     * Seed 3.
+     *
      * @var integer
      */
     private $r3;
@@ -136,13 +142,13 @@ class Noise
      */
     public function noise($x, $y)
     {
-        $x = intval($x);
-        $y = intval($y);
+        $x = (int) $x;
+        $y = (int) $y;
         $n = $x + $y * 57;
         $xl = ($n << 13) ^ $n;
-        $x2 = intval($xl * $xl * $this->r1 + $this->r2);
-        $t1 = intval($xl *  $x2);
-        $t2 = intval($t1 + $this->r3);
+        $x2 = (int) ($xl * $xl * $this->r1 + $this->r2);
+        $t1 = (int) ($xl * $x2);
+        $t2 = (int) ($t1 + $this->r3);
         $t3 = $t2 & 0x7fffffff; // max 32 bit integer value.
 
         return 1 - ($t3 / 1073741824.0);
