@@ -76,7 +76,8 @@ class Noise
      *
      * @return float
      */
-    public function noise2D($x, $y){
+    public function noise2D($x, $y)
+    {
         $total = 0;
 
         for ($i = 0; $i < $this->octaves; $i++){
