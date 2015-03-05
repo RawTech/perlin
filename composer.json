@@ -1,0 +1,15 @@
+{
+    "name": "rawtech/perlin",
+    "require-dev": {
+        "phpunit/phpunit": "~4.5"
+    },
+    "autoload": {
+        "psr-0": {"RawTech": "src/"}
+    },
+    "authors": [
+        {
+            "name": "RawTech",
+            "email": "luke@rawtech.me"
+        }
+    ]
+}
