@@ -1,5 +1,6 @@
 {
     "name": "rawtech/perlin",
+    "version": "1.0",
     "require-dev": {
         "phpunit/phpunit": "~4.5"
     },
